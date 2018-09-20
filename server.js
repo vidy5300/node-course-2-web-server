@@ -59,6 +59,13 @@ app.get('/about', (request, response) => {
     });
 });
 
+app.get('/projects', (request, response) => {
+    response.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        projectsMessage: 'Projects are under construction. Please visit soon!!'
+    });
+});
+
 app.get('/bad', (request, response) => {
     response.send({
         error: 'Unable to fullfill this request'
